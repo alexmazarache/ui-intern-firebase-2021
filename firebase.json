@@ -4,11 +4,18 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    "port": 5000,
     "public": "dist/",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   },
   "storage": {
@@ -20,9 +27,6 @@
     },
     "firestore": {
       "port": 8080
-    },
-    "hosting": {
-      "port": 5000
     },
     "ui": {
       "enabled": true

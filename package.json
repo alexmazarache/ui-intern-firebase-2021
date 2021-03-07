@@ -24,8 +24,8 @@
     "firebaseui": "^4.7.3"
   },
   "alias": {
-    "database": "./src/scripts/providers/data-provider.js",
-    "auth": "./src/scripts/providers/auth.js",
-    "initApp": "./src/scripts/providers/initApp.js"
+    "database": "/src/scripts/providers/data-provider.js",
+    "auth": "/src/scripts/providers/auth.js",
+    "initApp": "/src/scripts/providers/initApp.js"
   }
 }

@@ -2,8 +2,9 @@ import "./styles.css";
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import firebase from "firebase/app";
+import "firebase/auth";
 //
-import "./scripts/providers/initApp";
+import "initApp";
 import "auth";
 import db from "database";
 
@@ -32,7 +33,6 @@ db.collection("EXAMPLE_COLLECTION")
   });
 
 function signOut() {
-  console.log("signed out user");
   firebase
     .auth()
     .signOut()
