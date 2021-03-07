@@ -1,6 +1,6 @@
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import firebase from "firebase/app";
-import firebaseui from "firebaseui";
+import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
 import "/src/scripts/providers/initApp";
 
