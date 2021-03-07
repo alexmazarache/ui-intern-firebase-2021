@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Firebase/Parcel starter project example",
   "scripts": {
-    "clean": "rm dist/bundle.js",
+    "clean": "rm -rf dist",
     "start": "parcel ./src/**/*.html",
     "build": "parcel build ./src/**/*.html"
   },
