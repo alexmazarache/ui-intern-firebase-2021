@@ -2,15 +2,13 @@
 import firebase from "firebase/app";
 import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
-import "/src/scripts/providers/initApp";
+import "initApp";
 
 // FirebaseUI config.
 const uiConfig = {
   callbacks: {
     signInSuccessWithAuthResult: function (authResult) {
-      var user = authResult.user;
-      console.log("logged", user);
-
+      // var user = authResult.user;
       return true;
     },
     signInFailure: function (error) {
