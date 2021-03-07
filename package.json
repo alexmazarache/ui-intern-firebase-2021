@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "clean": "rm dist/bundle.js",
-    "start": "parcel src/index.html --open",
+    "start": "parcel ./src/**/*.html",
     "build-prod": "parcel build src/index.html"
   },
   "keywords": [],
@@ -23,6 +23,12 @@
   },
   "dependencies": {
     "firebase": "^8.2.10",
+    "firebaseui": "^4.7.3",
     "tailwindcss": "^2.0.3"
+  },
+  "alias": {
+    "database": "./src/scripts/providers/data-provider.js",
+    "auth": "./src/scripts/providers/auth.js",
+    "initApp": "./src/scripts/providers/initApp.js"
   }
 }
