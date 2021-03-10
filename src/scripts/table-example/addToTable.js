@@ -1,3 +1,4 @@
+import firebase from "firebase/app";
 import db from "database";
 
 function addItem(event) {
@@ -9,6 +10,7 @@ function addItem(event) {
   const newDocument = {
     title: form.querySelector(".item-title").value,
     value: form.querySelector(".item-value").value,
+    createdAt: firebase.firestore.FieldValue.serverTimestamp(),
   };
 
   collectionRef

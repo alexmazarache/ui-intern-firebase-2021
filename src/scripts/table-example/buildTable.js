@@ -19,7 +19,7 @@ function deleteItem(event) {
 }
 
 export default () => {
-  collectionRef.orderBy("title").onSnapshot((querySnapshot) => {
+  collectionRef.orderBy("createdAt").onSnapshot((querySnapshot) => {
     container.innerHTML = "";
 
     const data = querySnapshot.docs.map((doc) => ({
