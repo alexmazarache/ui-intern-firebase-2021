@@ -5,7 +5,7 @@ function addItem(event) {
   event.preventDefault();
   event.stopPropagation();
 
-  const collectionRef = db.collection("EXAMPLE_COLLECTION");
+  const collectionRef = db.collection("NewCollection");
   const form = document.querySelector(".add-new-items-form");
   const newDocument = {
     title: form.querySelector(".item-title").value,
