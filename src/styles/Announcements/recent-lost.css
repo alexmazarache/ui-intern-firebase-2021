@@ -1,0 +1,157 @@
+:root {
+  --fontType: Garamond;
+  --darkGreen: #1e3322;
+  --beige: #ebebeb;
+  --lightGreen: #3f6745;
+  --orangeBright: #fd661f;
+  --someBlack: #1f1f1e;
+  font-size: 16px;
+  --card-img-height: 200px;
+}
+
+.recent-lost-cards {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  align-self: flex-start;
+  position: relative;
+  width: 325px;
+  height: 400px;
+  margin: 1.25rem 0.75rem;
+  background: var(--beige);
+  border-radius: 10px;
+}
+
+.card .card-img {
+  width: 100%;
+  height: var(--card-img-height);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card .card-img-hovered {
+  --card-img-hovered-overlay: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  height: var(--card-img-height);
+  top: 0;
+}
+
+.card .card-info {
+  position: absolute;
+  padding: 0.75rem 1.25rem;
+  margin-top: 65%;
+}
+
+.card-info .card-about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: -0.25rem 0;
+  color: var(--darkGreen);
+}
+
+.car-about .card-category {
+  width: 60px;
+  max-width: 100px;
+  padding: 0.2rem 0.5rem;
+  font-size: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: var(--lightGreen);
+  color: var(beige);
+}
+
+.card-info .card-title {
+  display: contents;
+  font-size: 1.5rem;
+}
+
+.card-info .card-location {
+  padding-bottom: 0.75rem;
+}
+
+.card-info.card-img-hovered {
+  --card-img-hovered-overlay: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.65)
+  );
+  height: 100%;
+}
+
+.card-info:hover .card-info {
+  background-color: transparent;
+}
+
+.card:hover .card-title {
+  color: var(--lightGreen);
+  transform: translate(0, 40px);
+}
+
+.card-1 .card-img-hovered {
+  background-image: var(--card-img-hovered-overlay),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQyXCUwpDgFACQjTNpu00SeYCrSKBLsXzEbA&usqp=CAU);
+}
+
+.card-2 .card-img-hovered {
+  background-image: var(--card-img-hovered-overlay),
+    url(https://media3.s-nbcnews.com/i/newscms/2019_30/2945251/190724-better-lost-dog-stock-se-1148a_8ab8d22ab03cd40b5fb42631806db3d3.jpg);
+}
+
+.card-3 .card-img-hovered {
+  background-image: var(--card-img-hovered-overlay),
+    url(https://media.gq-magazine.co.uk/photos/5d139a67eef9217ad49ff29a/16:9/w_1920,c_limit/Varsity-Jacket-GQ-30Aug17_b.jpg);
+}
+
+.btn {
+  display: inherit;
+}
+.fa-info-circle,
+.fa-bell {
+  margin-right: 8px;
+}
+
+.button-choose1 {
+  margin: 0px auto;
+  padding: 5px;
+  border-radius: 4px;
+  text-align: center;
+  min-width: 135px;
+  color: var(--beige);
+  background-color: var(--orangeBright);
+  font-size: 100%;
+  display: inline-block;
+}
+
+.button-choose2 {
+  margin: 0px auto;
+  padding: 5px;
+  border-radius: 4px;
+
+  text-align: center;
+  min-width: 135px;
+  color: var(--beige);
+  background-color: var(--lightGreen);
+  font-size: 100%;
+  display: inline-block;
+}
+
+.button-choose1:hover,
+.button-choose2:hover {
+  border-radius: 4px;
+}

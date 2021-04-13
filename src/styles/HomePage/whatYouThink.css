@@ -1,0 +1,185 @@
+:root {
+    --fontType: Garamond;
+    --darkGreen: #1e3322;
+    --beige: #ebebeb;
+    --lightGreen: #3f6745;
+    --orangeBright: #fd661f;
+    --someBlack: #1f1f1e;
+  }
+  
+  .getInTouch {
+    font: 95% var(--fontType);
+    max-width: 55%;
+    margin: 10px auto;
+    padding: 20px;
+    background: var(--lightGreen);
+    border-radius: 15px;
+  }
+  
+  .getInTouch h3 {
+    display: block;
+    background: var(--lightGreen);
+    padding: 16px 0;
+    text-align: center;
+    color: var(--beige);
+    margin: 7px 35px -7px 35px;
+    font-size: 20px;
+    font-family: var(--fontType);
+  }
+  
+  .secondaryTitle h3 {
+      background: var(--lightGreen);
+      padding: 9px 10px;
+      font-size: 80%;
+      font-weight: 300;
+      text-align: center;
+      color: var(--beige);
+      margin: 7px 35px -7px 35px;
+  }
+  
+  .getInTouchForm-field {
+    display: flex;
+    flex-flow: column-reverse;
+    color: var(--darkGreen);
+    width: 60%;
+    font-size: 10px;
+    margin: 25px auto;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    transition: all 0.5s ease 0s;
+    font-family: var(--fontType);
+  }
+  .getInTouchForm-field label,
+  .getInTouchForm-field input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+  }
+  
+  .getInTouchForm-field input
+   {
+    height: 35px;
+    font-size: 20px;
+    border: 0;
+    border-bottom: 2px solid var(--orangeBright);
+    font-family: var(--fontType);
+    background-color: var(--beige);
+    border-radius: 4px;
+    cursor: text;
+  }
+  
+  .getInTouchForm-field textarea{
+      height: 100px;
+      font-size: 20px;
+      border: 0;
+      border-bottom: 2px solid var(--orangeBright);
+      font-family: var(--fontType);
+      background-color: var(--beige);
+      border-radius: 4px;
+      cursor: text;
+  }
+  
+  .getInTouchForm-field input:focus,
+  .getInTouchForm-field textarea:focus {
+    outline: 0;
+    border-bottom: 5px solid var(--orangeBright);
+  }
+  
+  .getInTouchForm-field label {
+    letter-spacing: 0.05em;
+    color: var(--beige);
+    font-size: 16px;
+    font-family: var(--fontType);
+  }
+  
+  .getInTouchForm-field input:placeholder-shown + .getInTouchForm-field label {
+    cursor: text;
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+    text-align: center;
+  }
+  
+  .getInTouchForm-field textarea:placeholder-shown + .getInTouchForm-field label {
+    cursor: text;
+    width: 65%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.5);
+    text-align: center;
+  }
+  
+  .getInTouchForm-field ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  
+  /* * Show the placeholder when the input is focused. */
+  .getInTouchForm-field input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+  
+  /**
+    * When the element is focused, remove the label transform.
+    * Also, do this when the placeholder is _not_ shown, i.e. when 
+    * there's something in the input at all.
+    */
+  .getInTouchForm-field
+    input:not(:placeholder-shown)
+    + .getInTouchForm-field
+    label,
+  .getInTouchForm-field input:focus + .getInTouchForm-field label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+    color: var(--beige);
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .getInTouchForm-field
+    textarea:not(:placeholder-shown)
+    + .getInTouchForm-field
+    label,
+  .getInTouchForm-field textarea:focus + .getInTouchForm-field label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+    color: var(--beige);
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .submit {
+    min-width: 200px;
+    width: 20%;
+    color: var(--beige);
+    background-color: var(--orangeBright);
+    font-size: 100%;
+    display: grid;
+    border-radius: 4px;
+  }
+  
+  .submit:hover {
+    box-shadow: 5px 5px 5px 5px var(--darkGreen);
+    transform: translateY(-3px);
+    width: 230px;
+    border-bottom: 5px solid var(--darkGreen);
+    border-radius: 4px;
+    font-family: var(--fontType);
+  }
+  
+  @media screen and (max-width: 600px) {
+    .getInTouch {
+      font: 95% var(--fontType);
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 10px;
+      background: var(--lightGreen);
+      border-radius: 15px;
+    }
+  }

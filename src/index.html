@@ -1,62 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css"
-        integrity="sha384-LTIDeidl25h2dPxrB2Ekgc9c7sEC3CWGM6HeFmuDNUjX76Ert4Z4IY714dhZHPLd" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles.css">
-</head>
+        <meta charset="utf-8"> 
+        <script src="https://kit.fontawesome.com/ae6265762c.js" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.5/build/pure-min.css" integrity="sha384-G9DpmGxRIF6tpgbrkZVcZDeIomEU22LgTguPAI739bbKytjPE/kHTK5YxjJAAEXC" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/e1bc69aef9.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        <title>Lost and Found</title>  
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+        <link rel="icon" type="image/png" href="./images/iconv2.png" />
+        <link rel="stylesheet" type="text/css" href="./styles/HomePage/main.css">
 
-<body>
-    <nav class="pure-menu pure-menu-horizontal">
-        <div>
-            <a href="/" class="pure-menu-heading pure-menu-link">Potato Page</a>
-            <ul class="pure-menu-list">
-                <li class="pure-menu-item">
-                    <a href="./pages/example-page-1/example-page-1.html" class="pure-menu-link">Page 1 example</a>
-                </li>
-                <li class="pure-menu-item">
-                    <a href="./pages/example-page-1/example-page-1.html" class="pure-menu-link">Page 2 example</a>
-                </li>
-            </ul>
+       
+      
+    </head>
+
+    <body class="content">
+        
+       
+        <header>
+            <a href="index.html">
+                <img src="images/iconv2.png" alt="Lost and Found Logo"  class="logo">
+            </a>
+    
+            <input type="checkbox" class="nav-toggle" id="nav-toggle">
+            <nav>
+                <ul>
+                    <li class="activePage"><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/announcements/announcements.html">Announcements</a></li>
+                    <li><a href="#">Add</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                    <li>
+                        <a class="myAccount">
+                            <i class="fas fa-user-circle"></i>
+                            <span>Login</span>
+                        </a>
+                        
+                    </li>
+                    
+                </ul>
+           
+            </nav>
+            
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header> 
+
+        <main>
+
+            <section id="baner">
+                         <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    
+                    <div class="mySlides fade">
+                        <img src="images/lost1.jpg" alt = "Slideshow image 1">
+                    </div>
+                
+                    <div class="mySlides fade">
+                        <img src="images/lost2.jpg" alt = "Slideshow image 2">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/lost3.jpg"  alt = "Slideshow image 3">
+                    </div>
+                
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+              </div>
+              <br>
+                
+                <!-- The dots/circles -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+
+            </section>
+
+            <div class ="text-box-up">
+             <h2> Ask for help | Help someone | Be a hero</h2>
+          </div>
+            <section id="search">
+                <div class="divSearch">
+                    <form class="pure-form">
+                        <fieldset>
+                       <input type ="text"  name ="search-input"class="pure-input-1-3"placeholder="Search an item">
+                       <input type ="text"  name ="location-input" class="pure-input-1-5"placeholder="Location">
+                       <select id="stacked-state" class="pure-input-1-5" >
+                        <option value="" disabled selected>Item lost type</option>
+                        <option> Personal Accesories</option>
+                        <option>Pets</option>
+                        <option>Toys</option>
+                    </select>
+                    
+                    <button type="submit" class="button-primary"> <i class="fas fa-search"></i>Search</button>
+                </fieldset>
+                    </form>
+                </div>
+                
+            
+            </section>
+            <section id="recent-lost">
+                <div class="recent-lost-cards">
+            
+                        <div class="card card-1">
+                          <div class="card-img"> </div>
+                            <div class="card-img-hovered"></div>
+                          
+                          <div class="card-info">
+                            <div class="card-about">
+                              <div class="card-category tag">Personal Accessories</div>
+                            <div class="card-time">06/04/2021</div>
+                            </div>
+                            <h2 class="card-title">Wallet</h2>
+                            <div class="card-location"><p>The Belfry, East 14th Street</p></div>
+                            <div class="btn">
+                                <button class="button-choose1 pure-button"><i class="fas fa-info-circle"></i>More details</button>
+                                <button class="button-choose2 pure-button"><i class="fas fa-bell"></i>Alert owner</button>
+                              </div>  
+                        </div>
+                        </div>
+            
+                        <div class="card card-2">
+                          <div class="card-img"></div>
+                            <div class="card-img-hovered"></div>
+                          <div class="card-info">
+                            <div class="card-about">
+                              <div class="card-category tag">Animals/Pets</div>
+                            <div class="card-time">01/04/2021</div>
+                            </div>
+                            <h2 class="card-title">Dog</h2>
+                            <div class="card-location"><p>7708 Aquatic Drive, Arverne</p></div>
+                            <div class="btn">
+                                <button class="button-choose1 pure-button"><i class="fas fa-info-circle"></i>More details</button>
+                                <button class="button-choose2 pure-button"><i class="fas fa-bell"></i>Alert owner</button>
+                            </div>
+                        </div>
+                      </div>
+            
+                        <div class="card card-3">
+                          <div class="card-img"></div>
+                            <div class="card-img-hovered"></div>
+                          <div class="card-info">
+                            <div class="card-about">
+                              <div class="card-category tag"> Clothing</div>
+                            <div class="card-time">01/04/2021</div>
+                            </div>
+                            <h2 class="card-title"> Jacket</h2>
+                            <div class="card-location"><p>in front of my face</p></div>
+                            <div class="btn">
+                                
+                                <button class="button-choose1 pure-button"><i class="fas fa-info-circle"></i>More details</button>
+                                <button class="button-choose2 pure-button"><i class="fas fa-bell"></i>Alert owner</button>
+                              </div>  
+                        </div>
+                          
+                        </div>
+                    </div>
+            </section>
+            <section id="testimonials">
+                
+<div class="bigCard" style ="background-color:white">
+    <div class="plain-svg-9-copy"></div>
+<!-- 
+    </div>
+    <div class ="text-box-up">
+        Ask for help | Help someone | Be a hero
+      
+    </div><br><br> -->
+    <div class="content-tables ">
+        <!-- "pure-u-1 pure-u-md-1-3 -->
+        <div class="cardDiv" >
+            <div class="content-table content-table-free">
+                <div class="content-table-header">
+                   
+                    <h3 id="myh">  Stories</h3> 
+                    <div class="flip-card-front">
+      <!-- <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;"> -->
+    </div>
+                    <i class="far fa-check-circle" style ="font-size: 40px;"> </i>
+                   
+                    <h2 id="myh">Alina found her cat</h2> 
+                   
+                </div>
+
+               <!-- / <button class="button-choose pure-button">Choose</button> -->
+            </div>
+       
+            
+            <span class="user-story">
+                <p>
+                    A story will be writted here  about Ana who has lost her pretty cat.
+                </p>
+            </span>
         </div>
-        <button type="button" id="signout" class="button-warning pure-button">Sign Out</button>
-    </nav>
 
-    <div class="container">
-        <span>Orice</span>
-        <form class="add-new-items-form pure-form">
-            <fieldset>
-                <legend>Add new items<legend>
-                        <input class="item-title" type="text" placeholder="Title" />
-                        <input class="item-value" type="text" placeholder="Value" />
-                        <button type="submit" class="add-new-item pure-button pure-button-primary">Add new</button>
-            </fieldset>
-        </form>
-    </div>
+        <div class="cardDiv" style = "width: 40%;">
+            <div class="content-table content-table-free">
+                <div class="content-table-header" >
+                    <h3 id="myh">  Motivation</h3>
+                    <i class="far fa-check-circle" style ="font-size: 40px;"> </i>
+                  </div>
+                 </div>
+                 <p class="paragraph-inside">
+                    Study says the average human misplaces up to 9 objects a day.We 
+                    probably cannot help you find your remote but someone might have found the wallet you lost on a busy day to work and wants to become a hero for the day
+                    .For those times we create an  easy system that can allow people to help and be helped.
+                    </p>  </div>
 
-    <div class="container">
-        <table style="width: 100%" class="example-table pure-table pure-table-horizontal">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Column 1</th>
-                    <th>Column 2</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <td colspan="100%" style="text-align: center;">Loading...</td>
-            </tbody>
-        </table>
-    </div>
+          <!-- "pure-u-1 pure-u-md-1-3 -->
+          <div class="cardDiv" >
+            <div class="content-table content-table-free">
+                <div class="content-table-header">
+                    <h3 id="myh">   Stories</h3> 
+                    <i class="far fa-check-circle" style ="font-size: 40px;"> </i>
+                    <h2 id="myh">George found his wallet</h2> 
 
-    <!-- Main app -->
-    <script src="./index.js"></script>
-</body>
+                </div>
+            </div>
+             <span class="user-story">
+                <p>
+                    A story will be writted here about how happy George is because
+                    he found his wallet
+                    fdfd
+                    fd
 
+                </p>
+            </span>
+        </div>
+    </div> 
+</div> 
+            </section>
+            <section id="get-in-touch">
+             <div class="getInTouch">
+             <h3>Tell us what you think</h3>
+                <div class="secondaryTitle title">
+                    <h3>Fill this form to find out what we can improve.</h3>
+                </div>
+                <form class="getInTouchForm">
+                    <div class="getInTouchForm-field">
+                        <input type="text" class="fullname" id="fullname"  required>
+                        <label for="fullname">Name</label>
+                      </div>
+                      
+                      <div class="getInTouchForm-field">
+                        <input type="email" class="email" id="email"  placeholder=" " required>
+                        <label for="email">Email</label>
+                      </div>
+
+                      <div class="getInTouchForm-field" >
+                        <textarea type="text" class="message" id="message"  required></textarea>
+                        <label for="message">Message</label>
+                      </div>
+                    <button class="submit getInTouchForm-field" onclick="thanks()">Submit now</button>
+                 </form> 
+             </div>
+            </section>
+
+        </main>
+        <footer>
+            <section id="general-info">
+                <div class="footer-distributed">
+                <div class="footer-left">
+                          <h3><span> Lost & Found</span></h3>
+                          <p class="footer-company-name">© 2021 Lost & Found </p>
+                      </div>
+          
+                      <div class="footer-center">
+                          <div>
+                              <i class="fa fa-map-marker"></i>
+                                <p><span><a href="https://www.google.ro/maps/place/Endava/@46.7727428,23.621279,17z/data=!3m1!4b1!4m5!3m4!1s0x47490c6a927df801:0xf554e9773433236b!8m2!3d46.7727391!4d23.6234677"> United Business Center 1, Al. Vaida Voevod nr. 51<br>
+                                    Cluj-Napoca, Romania 400436</a></span></p>
+                          </div>
+          
+                          <div >
+                              <i class="fa fa-phone"></i>
+                              <p ><a href="tel:0372 363 282">0372 363 282</a></p>
+                          </div>
+                          <div>
+                              <i class="fa fa-envelope"></i>
+                              <p><a href="mailto:support@eduonix.com">info.cluj@endava.com</a></p>
+                          </div>
+                      </div>
+                      <div class="footer-right">
+                          <p class="footer-company-about">
+                            <p class="footer-links">
+                                <a href="#">HomePage</a>
+                                |
+                                <a href="#">Announcements</a>
+                                |
+                                <a href="#">Add</a>
+                                |
+                                <a href="#">My Account</a>
+                                |
+                                <a href="#">Contact</a>
+                            </p>
+                              We offer support for people to find their lost things.</p>
+                          <div class="footer-icons">
+                              <a href="#"><i class="fa fa-facebook"></i></a>
+                              <a href="#"><i class="fa fa-twitter"></i></a>
+                              <a href="#"><i class="fa fa-instagram"></i></a>   
+                          </div>
+                      </div>
+                    </div>
+            </section>
+        </footer>
+    <script src="./scripts/HomePage-scripts/carousel.js"></script>
+    </body>
 </html>
